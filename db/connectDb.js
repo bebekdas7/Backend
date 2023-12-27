@@ -9,11 +9,7 @@ mongoose.set('strictQuery',true)
 // helper function for connection
 const connectDb = async (databaseUrl) => {
     try {
-    await mongoose.connect(databaseUrl, {
-            ...options,
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });        
+    await mongoose.connect(databaseUrl, options);
     console.log("Connected Successfully")
     }
     catch (error) {
