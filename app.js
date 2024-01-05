@@ -4,7 +4,7 @@ import { router } from "./routes/web.js";
 import { connectDb } from "./db/connectDb.js";
 import cors from "cors";
 import bodyParser from "body-parser";
-const port= 8400 || process.env.PORT;
+const port = process.env.PORT || 8400;
 
 // configure dotenv
 dotenv.config();
@@ -34,6 +34,6 @@ connectDb(
 );
 
 // listen to browser port
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
   console.log(`App is listening at http://localhost:${process.env.PORT} `);
 });
