@@ -35,5 +35,5 @@ connectDb(
 
 // listen to browser port
 app.listen(port, () => {
-  console.log(`App is listening at http://localhost:${process.env.PORT} `);
+  console.log(`App is listening at http://localhost:${port} `);
 });
