@@ -183,6 +183,7 @@ class SiteController {
   };
   // get image
   static getImage = async (req, res) => {
+    console.log(req.params.id);
     gfs.files.findOne(
       { _id: new mongoose.mongo.ObjectId(req.params.id) },
       (err, file) => {

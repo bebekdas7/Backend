@@ -12,7 +12,8 @@ import path from "path";
 const router = express.Router();
 
 // Mongo uri
-const mongoURI = "mongodb://127.0.0.1:27017/dummyChaos";
+const mongoURI =
+  "mongodb+srv://bebekdas7:bebekdas7@vivek.ffunkje.mongodb.net/dummyChaos?retryWrites=true&w=majority";
 
 // Create mongoconnection
 const conn = mongoose.createConnection(mongoURI);
