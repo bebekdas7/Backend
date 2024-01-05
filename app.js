@@ -4,6 +4,7 @@ import { router } from "./routes/web.js";
 import { connectDb } from "./db/connectDb.js";
 import cors from "cors";
 import bodyParser from "body-parser";
+const port= 8400 || process.env.PORT;
 
 // configure dotenv
 dotenv.config();
