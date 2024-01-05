@@ -1,6 +1,6 @@
-import express from "express"
-import dotenv from "dotenv"
-import { router } from "./routes/web.js"
+import express from "express";
+import dotenv from "dotenv";
+import { router } from "./routes/web.js";
 import { connectDb } from "./db/connectDb.js";
 import cors from "cors";
 import bodyParser from "body-parser";
@@ -28,9 +28,11 @@ app.use("/", router);
 app.set("view engine", "ejs");
 
 // connecting database
-connectDb("mongodb+srv://bebekdas7:bebekdas7@vivek.ffunkje.mongodb.net/?retryWrites=true&w=majority");
+connectDb(
+  "mongodb+srv://bebekdas7:bebekdas7@vivek.ffunkje.mongodb.net/?retryWrites=true&w=majority"
+);
 
 // listen to browser port
 app.listen(process.env.PORT, () => {
-    console.log(`App is listening at http://localhost:${process.env.PORT} `)
-})
+  console.log(`App is listening at http://localhost:${process.env.PORT} `);
+});
